@@ -1,0 +1,52 @@
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    #logo {
+        position: absolute;
+        width: 150px;
+        height: auto;
+        left: 28%;
+        top: 40%;
+    }
+
+    #spinner {
+        width: 25px;
+        position: absolute;
+        top: 85%;
+        left: 47%;
+    }
+
+    .show1 {
+        display: none;
+    }
+
+    .show2 {
+        background-image: url("../images/onboarding_first.png");
+        width: 100%;
+        height: 920px;
+    }
+
+    #text {
+        position: absolute;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        top: 70%;
+        padding-left: 20px;
+    }
+
+    #text p:first-child {
+        font-size: 40px;
+        font-weight: 700;
+    }
+
+    #text p:first-child span {
+        font-weight: 900;
+    }
+
+    #text p:last-child {
+        padding-top: 10px;
+    }
+}
+
