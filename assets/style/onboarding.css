@@ -2,6 +2,7 @@
     * {
         margin: 0;
         padding: 0;
+        overflow-y: hidden;
     }
     #logo {
         position: absolute;
@@ -19,13 +20,14 @@
     }
 
     .show1 {
-        display: none;
+        display: block;
     }
 
     .show2 {
         background-image: url("../images/onboarding_first.png");
         width: 100%;
         height: 920px;
+        display: none;
     }
 
     #text {
