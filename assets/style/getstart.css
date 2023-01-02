@@ -25,6 +25,10 @@
         justify-content: center;
     }
 
+    #slider div:first-child {
+        background-color: black;
+    }
+
     #slider div{
         width: 20px;
         height: 3px;
