@@ -120,6 +120,7 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    margin-bottom: 80px;
   }
 
   .shoe {
@@ -144,7 +145,12 @@
   footer {
     display: flex;
     justify-content: space-around;
-    margin: 40px 0 20px 0;
+    position: fixed;
+    padding: 10px 0 5px 0;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    height: 40px;
   }
 
   footer Div {
