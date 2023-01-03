@@ -109,7 +109,7 @@
     background-color: black;
     color: white;
   }
-  
+
   .mainNav Div {
     border: 2px solid black;
     padding: 5px 10px;
@@ -180,5 +180,12 @@
 
   footer Div p{
     font-size: 10px;
+  }
+
+  .style {
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    padding: 40px;
   }
 }

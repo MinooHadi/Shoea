@@ -11,6 +11,8 @@ for (let mainDiv of mainDivs) {
     let brand = mainDiv.getAttribute("data-brand");
     const shoes = document.querySelector(".shoes");
     shoes.innerHTML = "";
+    shoes.classList.remove("style");
+    searchValue.value = "";
     addToDOM(await getFilteredData(brand));
     for (let div of mainDivs) {
       div.style.backgroundColor = "white";
@@ -40,19 +42,18 @@ const getAllData = async () => {
 };
 
 const getFilteredData = async (brand) => {
-    let param;
-    if(brand) {
-        param = `?brand=${brand}`
-    }
+  let param;
+  if (brand) {
+    param = `?brand=${brand}`;
+  }
   const response = await axios.get(`${BASE_URL}${param ?? ""}`);
   return response.data;
 };
 
 const getSearchData = async (keyWord) => {
-    const response = await axios.get(`${BASE_URL}?name=${keyWord}`);
-    console.log(response.data);
-    return response.data;
-}
+  const response = await axios.get(`${BASE_URL}?name=${keyWord}`);
+  return response.data;
+};
 
 function addToDOM(data) {
   const shoes = document.querySelector(".shoes");
@@ -78,7 +79,7 @@ for (let catagorie of catagories) {
     for (let navBrand of navBrands) {
       navBrand.style.backgroundColor = "white";
       navBrand.style.color = "black";
-      if(navBrand.getAttribute("data-brand") === brand){
+      if (navBrand.getAttribute("data-brand") === brand) {
         navBrand.style.backgroundColor = "black";
         navBrand.style.color = "white";
       }
@@ -86,17 +87,25 @@ for (let catagorie of catagories) {
 
     const shoes = document.querySelector(".shoes");
     shoes.innerHTML = "";
+    shoes.classList.remove("style");
+    searchValue.value = "";
     addToDOM(await getFilteredData(brand));
   });
 }
 
 const searchValue = document.querySelector("#search input");
-console.log(searchValue);
 searchValue.addEventListener("input", async () => {
-    console.log(searchValue.value);
-    const shoes = document.querySelector(".shoes");
+  const shoes = document.querySelector(".shoes");
+  shoes.innerHTML = "";
+  let searchData = await getSearchData(searchValue.value);
+  if (!searchData.length) {
+    shoes.innerText = "The desired product was not found";
+    shoes.classList.add("style");
+  } else {
     shoes.innerHTML = "";
-    addToDOM(await getSearchData(searchValue.value))
-})
+    shoes.classList.remove("style");
+    addToDOM(searchData);
+  }
+});
 
 window.addEventListener("DOMContentLoaded", getAllData);
