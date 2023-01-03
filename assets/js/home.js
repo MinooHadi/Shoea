@@ -60,6 +60,10 @@ function addToDOM(data) {
   for (let item of data) {
     let card = document.createElement("div");
     card.classList.add("card");
+    card.setAttribute(`data-id`, `${item.id}`);
+    card.addEventListener("click", () => {
+      window.location.href = `product.html?id=${card.getAttribute("data-id")}`;
+    });
     card.innerHTML = `<div class="shoe" data-brand="${item.brand}">
         <img src="${item.imageUrl[0]}" alt="" />
       </div>
