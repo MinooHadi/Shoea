@@ -48,6 +48,12 @@ const getFilteredData = async (brand) => {
   return response.data;
 };
 
+const getSearchData = async (keyWord) => {
+    const response = await axios.get(`${BASE_URL}?name=${keyWord}`);
+    console.log(response.data);
+    return response.data;
+}
+
 function addToDOM(data) {
   const shoes = document.querySelector(".shoes");
   for (let item of data) {
@@ -83,5 +89,14 @@ for (let catagorie of catagories) {
     addToDOM(await getFilteredData(brand));
   });
 }
+
+const searchValue = document.querySelector("#search input");
+console.log(searchValue);
+searchValue.addEventListener("input", async () => {
+    console.log(searchValue.value);
+    const shoes = document.querySelector(".shoes");
+    shoes.innerHTML = "";
+    addToDOM(await getSearchData(searchValue.value))
+})
 
 window.addEventListener("DOMContentLoaded", getAllData);
