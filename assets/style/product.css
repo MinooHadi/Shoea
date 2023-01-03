@@ -1,0 +1,128 @@
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  #top {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(237, 236, 236);
+  }
+
+  #top div:first-child {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+
+  #image {
+    text-align: center;
+  }
+
+  #image img {
+    width: 200px;
+    height: auto;
+    margin: 30px 0;
+  }
+
+  #name {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+  }
+
+  #view {
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+    font-size: 15px;
+    align-items: center;
+    color: grey;
+  }
+
+  .hr {
+    border-top: 1px solid rgb(199, 194, 194);
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  #description {
+    padding: 10px;
+    line-height: 40px;
+  }
+
+  #description p {
+    font-size: 14px;
+    color: gray;
+  }
+
+  #size, #color {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 5px;
+  }
+
+  #numbers, #colors {
+    display: flex;
+    gap: 10px;
+  }
+
+  #numbers div, #colors div {
+    width: 30px;
+    height: 30px;
+    border: 2px solid black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #quantity {
+    display: flex;
+    padding: 10px;
+    gap: 20px;
+    align-items: center;
+  }
+
+  #quantity div {
+    background-color: rgb(207, 201, 201);
+    padding: 10px 30px;
+    border-radius: 20px;
+  }
+
+  #quantity div input {
+    background-color: rgb(207, 201, 201);
+    border: 0;
+    width: 30px;
+    font-size: 25px;
+    text-align: center;
+    outline: none;
+  }
+
+  #price {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+  }
+
+  #price div p {
+    font-size: 14px;
+    color: gray;
+    line-height: 25px;
+  }
+
+  button {
+    background-color: black;
+    color: white;
+    display: flex;
+    height: fit-content;
+    gap: 10px;
+    border: 0;
+    padding: 15px 40px;
+    border-radius: 30px;
+  }
+}
