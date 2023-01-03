@@ -112,4 +112,9 @@ searchValue.addEventListener("input", async () => {
   }
 });
 
+const wishlist = document.querySelector("#right .fa-heart-o");
+wishlist.addEventListener("click", () => {
+  window.location.href = "wishlist.html"
+})
+
 window.addEventListener("DOMContentLoaded", getAllData);
