@@ -105,6 +105,11 @@
     gap: 20px;
   }
 
+  .mainNav Div:first-child {
+    background-color: black;
+    color: white;
+  }
+  
   .mainNav Div {
     border: 2px solid black;
     padding: 5px 10px;
@@ -123,6 +128,11 @@
     margin-bottom: 80px;
   }
 
+  .card .shoe img {
+    width: 150px;
+    height: 150px;
+  }
+
   .shoe {
     height: fit-content;
     width: fit-content;
@@ -133,9 +143,13 @@
   }
 
   .shoeName {
+    width: 150px;
     font-size: 14px;
     font-weight: 600;
     padding-top: 5px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap ;
   }
 
   .shoePrice {
