@@ -1,0 +1,113 @@
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  #navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+  }
+
+  #left {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .mainNav {
+    padding: 10px;
+    overflow-x: scroll;
+  }
+
+  .mainNav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .mainNav {
+    display: flex;
+    gap: 20px;
+  }
+
+  .mainNav Div:first-child {
+    background-color: black;
+    color: white;
+  }
+
+  .mainNav Div {
+    border: 2px solid black;
+    padding: 5px 10px;
+    border-radius: 20px;
+    height: fit-content;
+    width: fit-content;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  .shoes{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    flex-wrap: wrap;
+  }
+
+  #image {
+    position: relative;
+    background-color: rgb(235, 232, 232);
+    width: fit-content;
+    height: auto;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  #image img {
+    width: 150px;
+    height: 150px;
+  }
+
+  #icon {
+    width: fit-content;
+    height: fit-content;
+    padding: 4px;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 10px;
+    right: 10px;
+  }
+
+  #icon i {
+    color: white;
+  }
+
+  #text {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    line-height: 25px;
+  }
+
+  #rate {
+    display: flex;
+    gap: 5px;
+    color: grey;
+    align-items: center;
+  }
+
+  #rate p {
+    font-size: 15px;
+  }
+
+  #text h4:first-child {
+    width: 150px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap ;
+  }
+}
