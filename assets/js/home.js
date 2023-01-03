@@ -12,3 +12,13 @@ for(let mainDiv of mainDivs) {
         mainDiv.style.color = "white";
     })
 }
+
+const icons = document.querySelectorAll("footer Div i");
+for(let icon of icons) {
+    icon.addEventListener("click", () => {
+        for(let i of icons){
+            i.style.color = "grey"
+        }
+        icon.style.color = "black"
+    })
+}

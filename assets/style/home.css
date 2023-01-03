@@ -160,9 +160,8 @@
     gap: 5px;
   }
 
-  footer Div img {
-    width: 18px;
-    height: auto;
+  footer Div i {
+    color: grey;
   }
 
   footer Div p{
