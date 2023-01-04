@@ -1,9 +1,12 @@
-function showSelectedProduct() {
+const BASE_URL = "https://638e0461aefc455fb2b27d63.mockapi.io/address?selected=true";
+
+async function showSelectedProduct() {
+  await fillAddress();
   let selectedProducts = localStorage.getItem("myCart");
   selectedProducts = JSON.parse(selectedProducts);
   console.log(selectedProducts);
   const shoes = document.querySelector("#shoes");
-  let totalPrice = 0;
+  
   for (let selectedProduct of selectedProducts) {
     let count;
     if (selectedProduct.productCount) {
@@ -38,6 +41,18 @@ function showSelectedProduct() {
 
 function goToSelectAddress() {
   window.location.href = "shippingAddress.html"
+}
+
+const getAddress = async () => {
+  const response = await axios.get(BASE_URL);
+  return response.data[0];
+};
+
+const fillAddress = async () => {
+  const data = await getAddress();
+  const address = document.querySelector("#addressText");
+  address.innerHTML = `<h4>${data.title}</h4>
+  <p>${data.address}</p>`
 }
 
 window.addEventListener("DOMContentLoaded", showSelectedProduct);

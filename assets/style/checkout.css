@@ -48,6 +48,10 @@
     font-size: 20px;
   }
 
+  #addressText {
+    width: 80%;
+  }
+
   #addressText p {
     font-size: 12px;
     color: grey;

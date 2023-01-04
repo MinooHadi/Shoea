@@ -19,7 +19,7 @@ const createDOM = async () => {
         <p>${item.address}</p>
       </div>
       <div>
-        <input type="checkbox" />
+        <input type="checkbox" ${item.selected ? "checked" : ""} />
       </div>`;
 
       address.insertAdjacentElement("beforebegin", card)
