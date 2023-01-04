@@ -63,8 +63,8 @@ function showSelectedProduct() {
       <i class="fa fa-trash-o" onclick="deleteSelectedProduct(event)" data-id="${selectedProduct.id}"></i>
     </div>
     <div id="ShoeColorSize">
-      <p>${selectedProduct.selectedColor}</p>
-      <p>${selectedProduct.selectedSize}</p>
+      <p>color: <div style="background-color:${selectedProduct.selectedColor}"></div></p>
+      <p>size: ${selectedProduct.selectedSize}</p>
     </div>
     <div id="shoePrice">
       <h4>$ ${selectedProduct.price}</h4>

@@ -26,8 +26,8 @@ async function showSelectedProduct() {
         <h4>${selectedProduct.name}</h4>
       </div>
       <div id="ShoeColorSize">
-        <p>${selectedProduct.selectedColor}</p>
-        <p>${selectedProduct.selectedSize}</p>
+        <p>color: <div style="background-color:${selectedProduct.selectedColor}"></div></p>
+        <p>size: ${selectedProduct.selectedSize}</p>
       </div>
       <div id="shoePrice">
         <h4>$ ${selectedProduct.price}</h4>
@@ -89,6 +89,10 @@ function setShippingType() {
 
 function goToPaymentPage() {
   window.location.href = "payment.html"
+}
+
+function goToMyCart() {
+  window.location.href = "mycart.html"
 }
 
 window.addEventListener("DOMContentLoaded", showSelectedProduct);

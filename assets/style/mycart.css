@@ -145,4 +145,10 @@
   #right button i {
     color: white;
   }
+
+  #ShoeColorSize div {
+    width: 15px !important;
+    height: 15px !important;
+    border-radius: 50% !important;
+  }
 }
