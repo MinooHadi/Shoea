@@ -28,10 +28,10 @@ function showSelectedProduct() {
   let totalPrice = 0;
   for (let selectedProduct of selectedProducts) {
     let count;
-    if(selectedProduct.productCount){
+    if (selectedProduct.productCount) {
       count = selectedProduct.productCount;
     } else {
-      count = 1
+      count = 1;
     }
     let card = document.createElement("div");
     card.id = "card";
@@ -41,7 +41,7 @@ function showSelectedProduct() {
   <div id="text">
     <div id="shoeName">
       <h4>${selectedProduct.name}</h4>
-      <i class="fa fa-trash-o" onclick="deleteSelectedProduct()"></i>
+      <i class="fa fa-trash-o" onclick="deleteSelectedProduct(event)" data-id="${selectedProduct.id}"></i>
     </div>
     <div id="ShoeColorSize">
       <p>${selectedProduct.selectedColor}</p>
@@ -57,19 +57,26 @@ function showSelectedProduct() {
     </div>
   </div>`;
 
-  shoes.append(card)
+    shoes.append(card);
 
-  let price = selectedProduct.price * count;
-  totalPrice += price;
+    let price = selectedProduct.price * count;
+    totalPrice += price;
   }
 
   const total = document.querySelector("#totalPrice #left h4");
-  total.innerHTML = `$ ${totalPrice}.00`
+  total.innerHTML = `$ ${totalPrice}.00`;
 }
 
-
-function deleteSelectedProduct() {
-  
+function deleteSelectedProduct(e) {
+  let deleteId = e.target.getAttribute("data-id");
+  let products = localStorage.getItem("myCart");
+  products = JSON.parse(products);
+  products = products.filter((item) => item.id !== deleteId);
+  products = JSON.stringify(products);
+  localStorage.setItem("myCart", products);
+  const shoes = document.querySelector("#shoes");
+  shoes.innerHTML = "";
+  showSelectedProduct();
 }
 
-window.addEventListener("DOMContentLoaded", showSelectedProduct)
+window.addEventListener("DOMContentLoaded", showSelectedProduct);
