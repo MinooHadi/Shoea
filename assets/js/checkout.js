@@ -84,4 +84,8 @@ function setShippingType() {
   }
 }
 
+function goToPaymentPage() {
+  window.location.href = "payment.html"
+}
+
 window.addEventListener("DOMContentLoaded", showSelectedProduct);
