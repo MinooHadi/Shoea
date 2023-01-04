@@ -9,7 +9,6 @@ async function showSelectedProduct() {
   selectedProducts = JSON.parse(selectedProducts);
   console.log(selectedProducts);
   const shoes = document.querySelector("#shoes");
-
   for (let selectedProduct of selectedProducts) {
     let count;
     if (selectedProduct.productCount) {
@@ -39,7 +38,11 @@ async function showSelectedProduct() {
     </div>`;
 
     shoes.append(card);
+
   }
+
+  const total = document.querySelector("#price #amount h5");
+  total.innerText = `$ ${localStorage.getItem("totalPrice")}`;
 }
 
 function goToSelectAddress() {
@@ -74,7 +77,10 @@ function setShippingType() {
     shippingName.innerText = selectedShipping.shippingName;
 
     const shippingPrice = document.querySelector("#shippingPrice h5");
-    shippingPrice.innerText = selectedShipping.shippingPrice;
+    shippingPrice.innerText = `$ ${selectedShipping.shippingPrice}`;
+
+    const shippingAmountPrice = document.querySelector("#total h5");
+    shippingAmountPrice.innerHTML = `$ ${Number(localStorage.getItem("totalPrice")) + Number(selectedShipping.shippingPrice)}`
   }
 }
 

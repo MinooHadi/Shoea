@@ -79,6 +79,8 @@ function showSelectedProduct() {
 
   const total = document.querySelector("#totalPrice #left h4");
   total.innerHTML = `$ ${totalPrice}.00`;
+
+  localStorage.setItem("totalPrice", totalPrice);
 }
 
 function deleteSelectedProduct(e) {
@@ -91,6 +93,10 @@ function deleteSelectedProduct(e) {
   const shoes = document.querySelector("#shoes");
   shoes.innerHTML = "";
   showSelectedProduct();
+}
+
+function goToCheckoutPage() {
+  window.location.href = "checkout.html"
 }
 
 window.addEventListener("DOMContentLoaded", showSelectedProduct);

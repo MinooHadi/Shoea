@@ -8,7 +8,7 @@ function chooseShipping() {
     let shipping = {
         shippingIcon: data.querySelector("i").className,
         shippingName: data.querySelector(".addressText h4").innerText,
-        shippingPrice: data.querySelector(".price").innerText,
+        shippingPrice: data.querySelector(".price span").innerText,
     }
 
     shipping = JSON.stringify(shipping)
