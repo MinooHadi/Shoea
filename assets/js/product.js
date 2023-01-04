@@ -152,4 +152,6 @@ function addToCart() {
   }
   selectedProduct = JSON.stringify(selectedProduct);
   localStorage.setItem("myCart", selectedProduct);
+
+  window.location.href = "mycart.html"
 }
