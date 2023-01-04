@@ -19,3 +19,57 @@ for (let icon of icons) {
     icon.style.color = "black";
   });
 }
+
+function showSelectedProduct() {
+  let selectedProducts = localStorage.getItem("myCart");
+  selectedProducts = JSON.parse(selectedProducts);
+  console.log(selectedProducts);
+  const shoes = document.querySelector("#shoes");
+  let totalPrice = 0;
+  for (let selectedProduct of selectedProducts) {
+    let count;
+    if(selectedProduct.productCount){
+      count = selectedProduct.productCount;
+    } else {
+      count = 1
+    }
+    let card = document.createElement("div");
+    card.id = "card";
+    card.innerHTML = `<div id="image">
+    <img src="${selectedProduct.imageUrl[0]}" alt="" />
+  </div>
+  <div id="text">
+    <div id="shoeName">
+      <h4>${selectedProduct.name}</h4>
+      <i class="fa fa-trash-o" onclick="deleteSelectedProduct()"></i>
+    </div>
+    <div id="ShoeColorSize">
+      <p>${selectedProduct.selectedColor}</p>
+      <p>${selectedProduct.selectedSize}</p>
+    </div>
+    <div id="shoePrice">
+      <h4>$ ${selectedProduct.price}</h4>
+      <div id="quantity">
+        <i class="fa fa-minus" onclick="minus()"></i>
+        <input type="number" value="${count}" readonly />
+        <i class="fa fa-plus" onclick="plus()"></i>
+      </div>
+    </div>
+  </div>`;
+
+  shoes.append(card)
+
+  let price = selectedProduct.price * count;
+  totalPrice += price;
+  }
+
+  const total = document.querySelector("#totalPrice #left h4");
+  total.innerHTML = `$ ${totalPrice}.00`
+}
+
+
+function deleteSelectedProduct() {
+  
+}
+
+window.addEventListener("DOMContentLoaded", showSelectedProduct)
