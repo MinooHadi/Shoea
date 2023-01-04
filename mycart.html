@@ -40,13 +40,13 @@
       <div id="icons">
         <div>
           <a href="home.html">
-            <i class="fa fa-home" ></i>
+            <i class="fa fa-home"></i>
           </a>
           <p>Home</p>
         </div>
         <div>
           <a href="#">
-            <i class="fa fa-shopping-bag" style="color: black;"></i>
+            <i class="fa fa-shopping-bag" style="color: black"></i>
           </a>
           <p>Cart</p>
         </div>
@@ -66,6 +66,20 @@
         </div>
       </div>
     </footer>
+
+    <div class="deleteModal">
+      <h3>Remove From Cart?</h3>
+      <hr />
+      <div class="card">
+      </div>
+
+      <hr>
+
+      <div class="btn">
+        <button onclick="cancel()">Cancel</button>
+        <button onclick="deleteProduct()">Yes, Remove</button>
+      </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <script src="assets/js/mycart.js"></script>
   </body>

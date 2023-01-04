@@ -88,8 +88,61 @@ function showSelectedProduct() {
   localStorage.setItem("totalPrice", totalPrice);
 }
 
+let deleteId;
+
 function deleteSelectedProduct(e) {
-  let deleteId = e.target.getAttribute("data-id");
+  const deleteModal = document.querySelector(".deleteModal");
+  deleteModal.style.display = "flex";
+
+  const shoes = document.querySelector("#shoes");
+  shoes.style.filter = "blur(5px)";
+
+  const navbar = document.querySelector("#navbar");
+  navbar.style.filter = "blur(5px)"
+
+  deleteId = e.target.getAttribute("data-id");
+  let products = localStorage.getItem("myCart");
+  products = JSON.parse(products)
+  let data = products.find(item => item.id == deleteId);
+  
+  const card = document.querySelector(".card");
+  card.innerHTML = `<div class="image">
+  <img src="${data.imageUrl[0]}" alt="" />
+</div>
+<div class="text">
+  <div class="shoeName">
+    <h4>${data.name}</h4>
+  </div>
+  <div class="info">
+    <p>color: <div style="background-color: ${data.selectedColor}"></div></p>
+    <p>size: ${data.selectedSize}</p>
+  </div>
+  <div class="price">
+    <h5>$ ${data.price}</h5>
+    <div>
+      <i class="fa fa-minus"></i>
+      <p>${data.productCount}</p>
+      <i class="fa fa-plus"></i>
+    </div>
+  </div>
+</div>`
+  
+}
+
+function cancel() {
+  const deleteModal = document.querySelector(".deleteModal");
+  deleteModal.style.display = "none";
+
+  const shoes = document.querySelector("#shoes");
+  shoes.style.filter = "none";
+
+  const navbar = document.querySelector("#navbar");
+  navbar.style.filter = "none"
+
+  deleteId = null;
+}
+
+function deleteProduct() {
   let products = localStorage.getItem("myCart");
   products = JSON.parse(products);
   products = products.filter((item) => item.id !== deleteId);
@@ -98,6 +151,7 @@ function deleteSelectedProduct(e) {
   const shoes = document.querySelector("#shoes");
   shoes.innerHTML = "";
   showSelectedProduct();
+  cancel()
 }
 
 function goToCheckoutPage() {

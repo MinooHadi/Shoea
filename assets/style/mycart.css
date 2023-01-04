@@ -151,4 +151,88 @@
     height: 15px !important;
     border-radius: 50% !important;
   }
+
+  .deleteModal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    padding: 20px 0;
+    gap: 20px;
+    border-radius: 30px 30px 0 0;
+    position: fixed;
+    bottom: 0;
+    box-shadow: 5px 5px 20px 5px rgb(205, 202, 202);
+    display: none;
+  }
+
+  .card {
+    display: flex;
+    gap: 10px;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px 5px rgb(242, 240, 240);
+    padding: 10px;
+  }
+
+  .image {
+    background-color: rgb(235, 227, 227);
+    border-radius: 10px;
+  }
+
+  .image img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .btn button {
+    width: 40%;
+    padding: 15px 0;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+  }
+
+  .info {
+    display: flex;
+    gap: 10px;
+  }
+
+  .info div {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+  }
+
+  .price {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .price div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: rgb(229, 226, 226);
+    padding: 2px 5px;
+    border-radius: 10px;
+  }
+
+  .price div i {
+    font-size: 12px;
+  }
 }
