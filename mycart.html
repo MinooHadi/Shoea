@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/style/mycart.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div id="navbar">
+      <div id="leftDiv">
+        <i class="fa fa-google-wallet"></i>
+        <h3>My Cart</h3>
+      </div>
+      <div id="rightDiv">
+        <i class="fa fa-search"></i>
+      </div>
+    </div>
+
+    <div id="shoes">
+      <div id="card">
+        <div id="image">
+          <img src="assets/images/shoe.png" alt="" />
+        </div>
+        <div id="text">
+          <div id="shoeName">
+            <h4>Shoe name</h4>
+            <i class="fa fa-trash-o"></i>
+          </div>
+          <div id="ShoeColorSize">
+            <p>color</p>
+            <p>size</p>
+          </div>
+          <div id="shoePrice">
+            <h4>price</h4>
+            <div id="quantity">
+              <i class="fa fa-minus" onclick="minus()"></i>
+              <input type="number" value="1" readonly />
+              <i class="fa fa-plus" onclick="plus()"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="card">
+        <div id="image">
+          <img src="assets/images/shoe.png" alt="" />
+        </div>
+        <div id="text">
+          <div id="shoeName">
+            <h4>Shoe name</h4>
+            <i class="fa fa-trash-o"></i>
+          </div>
+          <div id="ShoeColorSize">
+            <p>color</p>
+            <p>size</p>
+          </div>
+          <div id="shoePrice">
+            <h4>price</h4>
+            <div id="quantity">
+              <i class="fa fa-minus" onclick="minus()"></i>
+              <input type="number" value="1" readonly />
+              <i class="fa fa-plus" onclick="plus()"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="card">
+        <div id="image">
+          <img src="assets/images/shoe.png" alt="" />
+        </div>
+        <div id="text">
+          <div id="shoeName">
+            <h4>Shoe name</h4>
+            <i class="fa fa-trash-o"></i>
+          </div>
+          <div id="ShoeColorSize">
+            <p>color</p>
+            <p>size</p>
+          </div>
+          <div id="shoePrice">
+            <h4>price</h4>
+            <div id="quantity">
+              <i class="fa fa-minus" onclick="minus()"></i>
+              <input type="number" value="1" readonly />
+              <i class="fa fa-plus" onclick="plus()"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="card">
+        <div id="image">
+          <img src="assets/images/shoe.png" alt="" />
+        </div>
+        <div id="text">
+          <div id="shoeName">
+            <h4>Shoe name</h4>
+            <i class="fa fa-trash-o"></i>
+          </div>
+          <div id="ShoeColorSize">
+            <p>color</p>
+            <p>size</p>
+          </div>
+          <div id="shoePrice">
+            <h4>price</h4>
+            <div id="quantity">
+              <i class="fa fa-minus" onclick="minus()"></i>
+              <input type="number" value="1" readonly />
+              <i class="fa fa-plus" onclick="plus()"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="card">
+        <div id="image">
+          <img src="assets/images/shoe.png" alt="" />
+        </div>
+        <div id="text">
+          <div id="shoeName">
+            <h4>Shoe name</h4>
+            <i class="fa fa-trash-o"></i>
+          </div>
+          <div id="ShoeColorSize">
+            <p>color</p>
+            <p>size</p>
+          </div>
+          <div id="shoePrice">
+            <h4>price</h4>
+            <div id="quantity">
+              <i class="fa fa-minus" onclick="minus()"></i>
+              <input type="number" value="1" readonly />
+              <i class="fa fa-plus" onclick="plus()"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div id="totalPrice">
+          <div id="left">
+            <p>Total Price</p>
+            <h4>Price</h4>
+          </div>
+          <div id="right">
+            <button>
+              <h4>Checkout</h4>
+              <i class="fa fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+        <div id="icons">
+          <div>
+            <i class="fa fa-home"></i>
+            <p>Home</p>
+          </div>
+          <div>
+            <i class="fa fa-shopping-bag"></i>
+            <p>Cart</p>
+          </div>
+          <div>
+            <i class="fa fa-cart-arrow-down"></i>
+            <p>Orders</p>
+          </div>
+          <div>
+            <i class="fa fa-folder-o"></i>
+            <p>Wallet</p>
+          </div>
+          <div>
+            <i class="fa fa-user-o"></i>
+            <p>Person</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="assets/js/mycart.js"></script>
+  </body>
+</html>

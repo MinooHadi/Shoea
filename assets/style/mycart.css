@@ -1,0 +1,148 @@
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  #navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+
+  #leftDiv {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  #card {
+    width: 90%;
+    margin-left: 2.5%;
+    border-radius: 10px;
+    box-shadow: 3px 3px 15px 3px rgb(210, 208, 208);
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    margin-top: 20px;
+  }
+
+  #image {
+    background-color: rgb(229, 226, 226);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #image img {
+    width: 100px;
+    height: 100px;
+  }
+
+  #text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 60%;
+    height: fit-content;
+  }
+
+  #shoeName {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #ShoeColorSize {
+    display: flex;
+    gap: 20px;
+  }
+
+  #shoePrice {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #shoePrice div {
+    width: fit-content;
+    background-color: rgb(205, 198, 198);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 10px;
+  }
+
+  #shoePrice input {
+    border: 0;
+    width: 20px;
+    font-size: 15px;
+    background-color: rgb(205, 198, 198);
+    text-align: center;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
+  }
+
+  #icons {
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    padding: 10px 0 5px 0;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    height: 40px;
+  }
+
+  #icons Div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+
+  footer Div i {
+    color: grey;
+  }
+
+  footer Div p {
+    font-size: 10px;
+  }
+
+  #totalPrice {
+    position: fixed;
+    bottom: 55px;
+    background-color: white;
+    width: calc(100% - 40px);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px 20px 20px;
+    border-radius: 10px 10px 0 0 ;
+    box-shadow: 5px 10px 10px 20px rgb(212, 209, 209);
+  }
+
+  #left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #right button {
+    display: flex;
+    padding: 10px 30px;
+    gap: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    align-items: center;
+  }
+
+  #right button i {
+    color: white;
+  }
+}
