@@ -1,13 +1,18 @@
 function updatecount(id, count) {
   let products = localStorage.getItem("myCart");
   products = JSON.parse(products);
+  let totalPrice = 0;
   for(let product of products){
     if(product.id == id){
       product.productCount = count;
     }
+    totalPrice += product.price * product.productCount;
   }
   products = JSON.stringify(products);
   localStorage.setItem("myCart", products);
+  localStorage.setItem("totalPrice", totalPrice);
+  const total = document.querySelector("#totalPrice #left h4");
+  total.innerHTML = `$ ${totalPrice}.00`;
 }
 
 function minus(e, id) {
