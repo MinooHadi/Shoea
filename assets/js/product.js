@@ -1,4 +1,5 @@
 const BASE_URL = "https://638e0461aefc455fb2b27d63.mockapi.io/products";
+let product;
 
 function goToHomePage() {
   window.location.href = "home.html";
@@ -9,11 +10,13 @@ function minus() {
   if (+quantity.value > 0) {
     quantity.value = Number(quantity.value) - 1;
   }
+  product.productCount = quantity.value;
 }
 
 function plus() {
   const quantity = document.querySelector("#quantity input");
   quantity.value = Number(quantity.value) + 1;
+  product.productCount = quantity.value;
 }
 
 window.addEventListener("DOMContentLoaded", async () => {
@@ -21,7 +24,7 @@ window.addEventListener("DOMContentLoaded", async () => {
   let productId = params.get("id");
   let response = await axios.get(`${BASE_URL}/${productId}`);
   let data = response.data;
-  console.log(data);
+  product = data;
 
   let icon ;
   if(data.isFavorite) {
@@ -72,20 +75,20 @@ window.addEventListener("DOMContentLoaded", async () => {
 <div id="size">
   <h3>Size</h3>
   <div id="numbers">
-    <div>${data.size[0]}</div>
-    <div>${data.size[1]}</div>
-    <div>${data.size[2]}</div>
-    <div>${data.size[3]}</div>
-    <div>${data.size[4]}</div>
+    <div onclick="selectSize(event)">${data.size[0]}</div>
+    <div onclick="selectSize(event)">${data.size[1]}</div>
+    <div onclick="selectSize(event)">${data.size[2]}</div>
+    <div onclick="selectSize(event)">${data.size[3]}</div>
+    <div onclick="selectSize(event)">${data.size[4]}</div>
   </div>
 </div>
 <div id="color">
   <h3>color</h3>
   <div id="colors">
-    <div style="background-color:${data.color[0]} ;"></div>
-    <div style="background-color:${data.color[1]} ;"></div>
-    <div style="background-color:${data.color[2]} ;"></div>
-    <div style="background-color:${data.color[3]} ;"></div>
+    <div style="background-color:${data.color[0]} ;" onclick="selectColor(event)"></div>
+    <div style="background-color:${data.color[1]} ;" onclick="selectColor(event)"></div>
+    <div style="background-color:${data.color[2]} ;" onclick="selectColor(event)"></div>
+    <div style="background-color:${data.color[3]} ;" onclick="selectColor(event)"></div>
   </div>
 </div>
 <div id="quantity">
@@ -102,7 +105,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     <p>Total price</p>
     <h2>$${data.price}</h2>
   </div>
-  <button>
+  <button onclick="addToCart()">
     <i class="fa fa-shopping-bag"></i>
     <h4>Add to Cart</h4>
   </button>
@@ -122,3 +125,26 @@ const toggleFavorite = async (e) => {
     }
   }
 };
+
+
+function addToCart() {
+  console.log(product);
+}
+
+
+function selectSize(e) {
+  const size = document.querySelectorAll("#numbers div");
+  size.forEach(item => item.classList.remove("selectedSize"));
+  e.target.classList.add("selectedSize");
+  product.selectedSize = e.target.innerText;
+}
+
+function selectColor(e) {
+  const color = document.querySelectorAll("#colors div");
+  color.forEach(item => item.classList.remove("selectedColor"));
+  e.target.classList.add("selectedColor");
+  product.selectedColor = e.target.style.backgroundColor;
+}
+
+
+

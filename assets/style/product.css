@@ -71,10 +71,19 @@
     gap: 10px;
   }
 
-  #numbers div, #colors div {
+  #numbers div {
     width: 30px;
     height: 30px;
     border: 2px solid black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #colors div {
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -148,5 +157,14 @@
     height: 8px !important;
     border-radius: 40% !important;
     background-color: black !important;
+  }
+
+  .selectedSize {
+    background-color: black;
+    color: white;
+  }
+
+  .selectedColor {
+    border: 2px solid black;
   }
 }
