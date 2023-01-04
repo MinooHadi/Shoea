@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/style/payment.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div id="navbar">
+      <i class="fa fa-long-arrow-left" onclick="goToCheckout()"></i>
+      <h3>Payment Methods</h3>
+    </div>
+
+    <div id="address">
+      <p>Select the payment method you want to use.</p>
+      <div class="card">
+        <div class="location">
+          <i class="fa fa-folder"></i>
+        </div>
+        <div class="addressText">
+          <h4>My Wallet</h4>
+        </div>
+        <div class="price">$ <span>9.379</span></div>
+        <div>
+          <input type="radio" name="5" data-id="${item.id}" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="location">
+          <i class="fa fa-paypal"></i>
+        </div>
+        <div class="addressText input">
+          <h4>PayPal</h4>
+        </div>
+        <div>
+          <input type="radio" name="5" data-id="${item.id}" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="location">
+          <i class="fa fa-google"></i>
+        </div>
+        <div class="addressText input">
+          <h4>Google Pay</h4>
+        </div>
+        <div>
+          <input type="radio" name="5" data-id="${item.id}" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="location">
+          <i class="fa fa-apple"></i>
+        </div>
+        <div class="addressText input">
+          <h4>Apple Pay</h4>
+        </div>
+        <div>
+          <input type="radio" name="5" data-id="${item.id}" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="location">
+          <i class="fa fa-credit-card "></i>
+        </div>
+        <div class="addressText input">
+          <h4>Master Card</h4>
+        </div>
+        <div>
+          <input type="radio" name="5" data-id="${item.id}" />
+        </div>
+      </div>
+    </div>
+
+    <button class="apply">Confirm Payment</button>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="assets/js/payment.js"></script>
+  </body>
+</html>

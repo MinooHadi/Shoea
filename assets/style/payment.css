@@ -1,0 +1,78 @@
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  #navbar {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .card {
+    border-radius: 10px;
+    width: 85%;
+    margin-left: calc(7.5% - 15px);
+    box-shadow: 5px 5px 10px 5px rgb(231, 227, 227);
+    padding: 20px 15px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .location {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgb(199, 190, 190);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+  }
+
+  .addressText {
+    width: 70%;
+  }
+
+  .addressText p {
+    font-size: 12px;
+    color: grey;
+  }
+
+  .addAddress,
+  .apply {
+    width: 80%;
+    margin-left: 10%;
+    padding: 20px 0;
+    border: none;
+    border-radius: 40px;
+    font-weight: 600;
+  }
+
+  .apply {
+    position: fixed;
+    bottom: 20px;
+    background-color: black;
+    color: white;
+  }
+
+  .price {
+    font-size: 15px;
+    display: flex;
+  }
+
+  #address p:first-child {
+    padding: 20px 10px 0 10px;
+  }
+
+  .input {
+    width: 80%;
+  }
+}
