@@ -1,13 +1,27 @@
-function minus() {
-  const quantity = document.querySelector("#quantity input");
-  if (+quantity.value > 0) {
-    quantity.value = Number(quantity.value) - 1;
+function updatecount(id, count) {
+  let products = localStorage.getItem("myCart");
+  products = JSON.parse(products);
+  for(let product of products){
+    if(product.id == id){
+      product.productCount = count;
+    }
   }
+  products = JSON.stringify(products);
+  localStorage.setItem("myCart", products);
 }
 
-function plus() {
-  const quantity = document.querySelector("#quantity input");
-  quantity.value = Number(quantity.value) + 1;
+function minus(e, id) {
+  let input = e.target.parentElement.querySelector("input");
+  if (+input.value > 0) {
+    input.value = Number(input.value) - 1;
+  }
+  updatecount(id, input.value);
+}
+
+function plus(e, id) {
+  let input = e.target.parentElement.querySelector("input");
+  input.value = Number(input.value) + 1;
+  updatecount(id, input.value);
 }
 
 const icons = document.querySelectorAll("footer Div i");
@@ -49,10 +63,10 @@ function showSelectedProduct() {
     </div>
     <div id="shoePrice">
       <h4>$ ${selectedProduct.price}</h4>
-      <div id="quantity">
-        <i class="fa fa-minus" onclick="minus()"></i>
+      <div class="quantity">
+        <i class="fa fa-minus" onclick="minus(event, ${selectedProduct.id})"></i>
         <input type="number" value="${count}" readonly />
-        <i class="fa fa-plus" onclick="plus()"></i>
+        <i class="fa fa-plus" onclick="plus(event, ${selectedProduct.id})"></i>
       </div>
     </div>
   </div>`;
