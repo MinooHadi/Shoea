@@ -121,4 +121,15 @@
   #shoes {
     margin-bottom: 70px;
   }
+
+  .black {
+    color: black !important;
+    border-color: black !important;
+  }
+
+  .info div {
+    width: 15px !important;
+    height: 15px !important;
+    border-radius: 50% !important;
+  }
 }

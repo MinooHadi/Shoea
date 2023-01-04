@@ -28,8 +28,14 @@ async function sendOrder() {
 }
 
 
-function gotoHome(e) {
+function goToHome(e) {
     e.target.style.backgroundColor = "black";
     e.target.style.color = "white";
     window.location.href = "home.html"
+}
+
+function goToPayment(e) {
+  e.target.style.backgroundColor = "black";
+  e.target.style.color = "white";
+  window.location.href = "order.html"
 }

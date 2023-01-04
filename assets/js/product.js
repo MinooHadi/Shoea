@@ -25,6 +25,7 @@ window.addEventListener("DOMContentLoaded", async () => {
   let response = await axios.get(`${BASE_URL}/${productId}`);
   let data = response.data;
   product = data;
+  product.productCount = 1;
 
   let icon ;
   if(data.isFavorite) {
