@@ -47,7 +47,7 @@ async function activeOrders() {
         </div>
         <div class="price">
             <h5>$${item.products[0].price}</h5>
-            <div>
+            <div onclick="tracking(event, ${item.id})">
                 Track Order
             </div>
         </div>
@@ -94,7 +94,7 @@ async function complatedOrders() {
         </div>
         <div class="price">
             <h5>$${item.products[0].price}</h5>
-            <div>
+            <div onclick="tracking(event, ${item.id})">
                 Track Order
             </div>
         </div>
@@ -102,6 +102,10 @@ async function complatedOrders() {
 
     shoes.append(card);
   }
+}
+
+function tracking(e, orderId) {
+  window.location.href = `ordertracking.html?id=${orderId}`;
 }
 
 window.addEventListener("DOMContentLoaded", activeOrders);
