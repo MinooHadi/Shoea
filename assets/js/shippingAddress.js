@@ -19,15 +19,31 @@ const createDOM = async () => {
         <p>${item.address}</p>
       </div>
       <div>
-        <input type="checkbox" ${item.selected ? "checked" : ""} />
+        <input type="radio" ${
+          item.selected ? "checked" : ""
+        } name="5" data-id="${item.id}"/>
       </div>`;
 
-      address.insertAdjacentElement("beforebegin", card)
+    address.insertAdjacentElement("beforebegin", card);
   }
 };
 
 function goToCheckout() {
-    window.location.href = "checkout.html"
+  window.location.href = "checkout.html";
+}
+
+async function updateAddress() {
+  const prevAddress = document.querySelector("input[checked]");
+  let prevId = prevAddress.getAttribute("data-id");
+  const currentAddress = document.querySelector("input:checked");
+  let currentId = currentAddress.getAttribute("data-id");
+
+  const res = await axios.put(`${BASE_URL}/${prevId}`, { selected: false });
+  if (res.status === 200) {
+    await axios.put(`${BASE_URL}/${currentId}`, { selected: true });
+  }
+
+  window.location.href = "checkout.html"
 }
 
 window.addEventListener("DOMContentLoaded", createDOM);
