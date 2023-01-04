@@ -1,0 +1,235 @@
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  #navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+
+  #leftDiv {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  #shippingAddress {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  #address {
+    border-radius: 10px;
+    width: 90%;
+    margin-left: calc(5% - 15px);
+    box-shadow: 5px 5px 10px 5px rgb(231, 227, 227);
+    padding: 20px 15px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  #location {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgb(199, 190, 190);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+  }
+
+  #addressText p {
+    font-size: 12px;
+    color: grey;
+  }
+
+  hr {
+    width: 90%;
+    margin-left: 5%;
+    color: rgb(251, 249, 249);
+  }
+
+  #orders {
+    margin: 20px 0;
+    padding: 10px;
+  }
+
+  #card {
+    width: 90%;
+    margin-left: 2.5%;
+    border-radius: 10px;
+    box-shadow: 3px 3px 15px 3px rgb(210, 208, 208);
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    margin-top: 20px;
+  }
+
+  #image {
+    background-color: rgb(229, 226, 226);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #image img {
+    width: 100px;
+    height: 100px;
+  }
+
+  #text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 60%;
+    height: fit-content;
+  }
+
+  #shoeName {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #ShoeColorSize {
+    display: flex;
+    gap: 20px;
+  }
+
+  #shoePrice {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #shoePrice div {
+    width: fit-content;
+    background-color: rgb(205, 198, 198);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 10px;
+  }
+
+  #shoePrice input {
+    border: 0;
+    width: 20px;
+    font-size: 15px;
+    background-color: rgb(205, 198, 198);
+    text-align: center;
+  }
+
+  #chooseShipping {
+    margin: 20px 0;
+    padding: 10px;
+  }
+
+  #shipping {
+    border-radius: 10px;
+    width: 90%;
+    margin-left: calc(5% - 15px);
+    box-shadow: 5px 5px 10px 5px rgb(231, 227, 227);
+    padding: 20px 15px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 10px;
+    justify-content: space-between;
+  }
+
+  #shipping div:first-child {
+    display: flex;
+    gap: 10px;
+  }
+
+  #promo {
+    margin: 20px 0;
+    padding: 10px;
+  }
+
+  #promoInput {
+    display: flex;
+    margin: 10px 0;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #promoInput input {
+    width: 75%;
+    padding: 15px;
+    background-color: rgb(225, 225, 225);
+    border: none;
+    border-radius: 10px;
+  }
+
+  #promoIcon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #promoInput i {
+    color: white;
+  }
+
+  #price {
+    border-radius: 10px;
+    width: 90%;
+    margin-left: calc(5% - 15px);
+    box-shadow: 5px 5px 10px 5px rgb(231, 227, 227);
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin-top: 20px;
+    justify-content: space-between;
+  }
+
+  #amount,
+  #shippingPrice,
+  #total {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  #amount p,
+  #shippingPrice p,
+  #total p {
+    font-size: 15px;
+    color: grey;
+  }
+
+  #hr {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  button {
+    margin: 20px 0;
+    width: 80%;
+    margin-left: 10%;
+    padding: 20px 0;
+    background-color: black;
+    color: white;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    border-radius: 40px;
+  }
+}

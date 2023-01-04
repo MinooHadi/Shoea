@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/style/checkout.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div id="navbar">
+      <div id="leftDiv">
+        <i class="fa fa-long-arrow-left"></i>
+        <h3>Checkout</h3>
+      </div>
+      <div id="rightDiv">
+        <i class="fa fa-ellipsis-h"></i>
+      </div>
+    </div>
+
+    <div id="shippingAddress">
+      <h3>Shipping Address</h3>
+      <div id="address">
+        <div id="location">
+          <i class="fa fa-map-marker"></i>
+        </div>
+        <div id="addressText">
+          <h4>Home</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+        </div>
+        <div id="edit">
+          <i class="fa fa-pencil"></i>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+
+    <div id="orders">
+      <h3>Order List</h3>
+      <div id="shoes"></div>
+    </div>
+
+    <hr />
+
+    <div id="chooseShipping">
+      <h3>Choose Shipping</h3>
+      <div id="shipping">
+        <div>
+          <i class="fa fa-truck"></i>
+          <h4>Choose Shipping Type</h4>
+        </div>
+        <i class="fa fa-chevron-right"></i>
+      </div>
+    </div>
+
+    <hr />
+
+    <div id="promo">
+      <h3>Promo Code</h3>
+      <div id="promoInput">
+        <input type="number" placeholder="Enter Promo Code" />
+        <div id="promoIcon">
+          <i class="fa fa-plus"></i>
+        </div>
+      </div>
+      <div id="price">
+        <div id="amount">
+          <p>Amount</p>
+          <h5>Price</h5>
+        </div>
+        <div id="shippingPrice">
+          <p>Shipping</p>
+          <h5>Price</h5>
+        </div>
+        <hr id="hr" />
+        <div id="total">
+          <p>Total</p>
+          <h5>Price</h5>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <button>
+      Continue to Payment
+      <i class="fa fa-arrow-right"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="assets/js/checkout.js"></script>
+  </body>
+</html>
