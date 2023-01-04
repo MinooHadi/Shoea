@@ -1,12 +1,15 @@
-const BASE_URL = "https://638e0461aefc455fb2b27d63.mockapi.io/address?selected=true";
+const BASE_URL =
+  "https://638e0461aefc455fb2b27d63.mockapi.io/address?selected=true";
 
 async function showSelectedProduct() {
   await fillAddress();
+  setShippingType();
+
   let selectedProducts = localStorage.getItem("myCart");
   selectedProducts = JSON.parse(selectedProducts);
   console.log(selectedProducts);
   const shoes = document.querySelector("#shoes");
-  
+
   for (let selectedProduct of selectedProducts) {
     let count;
     if (selectedProduct.productCount) {
@@ -40,7 +43,7 @@ async function showSelectedProduct() {
 }
 
 function goToSelectAddress() {
-  window.location.href = "shippingAddress.html"
+  window.location.href = "shippingAddress.html";
 }
 
 const getAddress = async () => {
@@ -52,11 +55,27 @@ const fillAddress = async () => {
   const data = await getAddress();
   const address = document.querySelector("#addressText");
   address.innerHTML = `<h4>${data.title}</h4>
-  <p>${data.address}</p>`
-}
+  <p>${data.address}</p>`;
+};
 
 function goToChooseShipping() {
-  window.location.href = "chooseShipping.html"
+  window.location.href = "chooseShipping.html";
+}
+
+function setShippingType() {
+  let selectedShipping = localStorage.getItem("shipping");
+  selectedShipping = JSON.parse(selectedShipping);
+
+  if (selectedShipping) {
+    const shippingIcon = document.querySelector("#shipping div i");
+    shippingIcon.className = selectedShipping.shippingIcon;
+
+    const shippingName = document.querySelector("#shipping div h4");
+    shippingName.innerText = selectedShipping.shippingName;
+
+    const shippingPrice = document.querySelector("#shippingPrice h5");
+    shippingPrice.innerText = selectedShipping.shippingPrice;
+  }
 }
 
 window.addEventListener("DOMContentLoaded", showSelectedProduct);
