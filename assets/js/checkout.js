@@ -36,4 +36,8 @@ function showSelectedProduct() {
   }
 }
 
+function goToSelectAddress() {
+  window.location.href = "shippingAddress.html"
+}
+
 window.addEventListener("DOMContentLoaded", showSelectedProduct);
