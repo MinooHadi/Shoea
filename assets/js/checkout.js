@@ -55,4 +55,8 @@ const fillAddress = async () => {
   <p>${data.address}</p>`
 }
 
+function goToChooseShipping() {
+  window.location.href = "chooseShipping.html"
+}
+
 window.addEventListener("DOMContentLoaded", showSelectedProduct);
