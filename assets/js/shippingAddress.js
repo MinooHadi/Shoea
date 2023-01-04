@@ -26,4 +26,8 @@ const createDOM = async () => {
   }
 };
 
+function goToCheckout() {
+    window.location.href = "checkout.html"
+}
+
 window.addEventListener("DOMContentLoaded", createDOM);
