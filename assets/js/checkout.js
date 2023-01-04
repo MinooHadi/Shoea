@@ -80,7 +80,10 @@ function setShippingType() {
     shippingPrice.innerText = `$ ${selectedShipping.shippingPrice}`;
 
     const shippingAmountPrice = document.querySelector("#total h5");
-    shippingAmountPrice.innerHTML = `$ ${Number(localStorage.getItem("totalPrice")) + Number(selectedShipping.shippingPrice)}`
+    let finalPrice = Number(localStorage.getItem("totalPrice")) + Number(selectedShipping.shippingPrice);
+    shippingAmountPrice.innerHTML = `$ ${finalPrice}`
+
+    localStorage.setItem("finalPrice", finalPrice);
   }
 }
 

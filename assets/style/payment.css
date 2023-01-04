@@ -75,4 +75,44 @@
   .input {
     width: 80%;
   }
+
+  .successful {
+    width: 80%;
+    position: fixed;
+    top: 150px;
+    left: 10%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    gap: 10px;
+    border-radius: 20px;
+    display: none;
+    z-index: 2;
+    box-shadow: 5px 5px 20px 5px rgb(187, 183, 183);
+  }
+
+  .icon {
+    width: 80px;
+    height: 80px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+
+  .successful button {
+    width: 80%;
+    padding: 15px 0;
+    background-color: rgb(214, 207, 207);
+    border: 0;
+    border-radius: 40px;
+    font-weight: 600;
+  }
 }
