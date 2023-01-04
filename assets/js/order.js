@@ -19,6 +19,11 @@ async function activeOrders() {
   let data = response.data;
   const shoes = document.querySelector("#shoes");
   shoes.innerHTML = "";
+
+  if(!data.length) {
+    shoes.innerHTML = "There is no active orders"
+  }
+
   for (let item of data) {
     if (!item.products) {
       continue;
@@ -61,6 +66,11 @@ async function complatedOrders() {
   let data = response.data;
   const shoes = document.querySelector("#shoes");
   shoes.innerHTML = "";
+
+  if(!data.length) {
+    shoes.innerHTML = "There is no completed orders"
+  }
+
   for (let item of data) {
     if (!item.products) {
       continue;

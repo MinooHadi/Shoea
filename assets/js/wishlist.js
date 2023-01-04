@@ -5,15 +5,20 @@ arrow.addEventListener("click", () => {
   window.location.href = "home.html";
 });
 
-let allData = [];
-
 const getFavoriteData = async () => {
   const response = await axios.get(`${BASE_URL}?isFavorite=true`);
-  allData = response.data;
+  addToDOM(response.data);
+};
+
+function addToDOM(allData) {
   let shoes = document.querySelector(".shoes");
+  shoes.innerHTML = "";
+  if(!allData.length){
+    shoes.innerHTML = "The desired product was not found"
+  }
   for (let data of allData) {
-      const card = document.createElement("div");
-      card.innerHTML = `<div id="image">
+    const card = document.createElement("div");
+    card.innerHTML = `<div id="image">
         <img src="${data.imageUrl[0]}" alt="" />
         <div id="icon">
           <i class="fa fa-heart"></i>
@@ -28,8 +33,29 @@ const getFavoriteData = async () => {
         <h5>$${data.price}</h5>
       </div>`;
 
-    shoes.append(card)
+    shoes.append(card);
   }
-};
+}
+
+const brands = document.querySelectorAll(".mainNav > div");
+for (let brand of brands) {
+  brand.addEventListener("click", async () => {
+    for(let item of brands){
+      item.style.backgroundColor = "white";
+      item.style.color = "black";
+    }
+    brand.style.backgroundColor = "black";
+    brand.style.color = "white";
+    let data;
+    let brandName = brand.getAttribute("data-brand");
+    const response = await axios.get(`${BASE_URL}?isFavorite=true`);
+    if (brandName) {
+      data = response.data.filter((item) => item.brand == brandName.toLowerCase());
+    } else {
+      data = response.data
+    }
+    addToDOM(data);
+  });
+}
 
 window.addEventListener("DOMContentLoaded", getFavoriteData);

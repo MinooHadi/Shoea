@@ -42,8 +42,14 @@ for (let icon of icons) {
 function showSelectedProduct() {
   let selectedProducts = localStorage.getItem("myCart");
   selectedProducts = JSON.parse(selectedProducts);
-  console.log(selectedProducts);
+  
   const shoes = document.querySelector("#shoes");
+
+  if(!selectedProducts) {
+    shoes.innerHTML = "No product has been selected"
+    return
+  }
+
   let totalPrice = 0;
   for (let selectedProduct of selectedProducts) {
     let count;
