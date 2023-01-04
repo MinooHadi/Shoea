@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/style/chooseShipping.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div id="navbar">
+      <i class="fa fa-long-arrow-left" onclick="goToCheckout()"></i>
+      <h3>Choose Shipping</h3>
+    </div>
+
+    <div id="address">
+      <div class="card">
+        <div class="location">
+          <i class="fa fa-codepen"></i>
+        </div>
+        <div class="addressText">
+          <h4>Economy</h4>
+          <p>Estimated Arrival, Dec 20-23</p>
+        </div>
+        <div class="price">
+            $10
+        </div>
+        <div>
+          <input type="radio" name="5" data-id="${item.id}" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="location">
+          <i class="fa fa-cube"></i>
+        </div>
+        <div class="addressText">
+          <h4>Regular</h4>
+          <p>Estimated Arrival, Dec 20-22</p>
+        </div>
+        <div class="price">
+            $15
+        </div>
+        <div>
+          <input type="radio" name="5" data-id="${item.id}" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="location">
+          <i class="fa fa-automobile"></i>
+        </div>
+        <div class="addressText">
+          <h4>Cargo</h4>
+          <p>Estimated Arrival, Dec 19-20</p>
+        </div>
+        <div class="price">
+            $20
+        </div>
+        <div>
+          <input type="radio" name="5" data-id="${item.id}" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="location">
+          <i class="fa fa-truck"></i>
+        </div>
+        <div class="addressText">
+          <h4>Express</h4>
+          <p>Estimated Arrival, Dec 18-19</p>
+        </div>
+        <div class="price">
+            $30
+        </div>
+        <div>
+          <input type="radio" name="5" data-id="${item.id}" />
+        </div>
+      </div>
+    </div>
+
+    <button class="apply" onclick="updateAddress()">Apply</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="assets/js/chooseShipping.js"></script>
+  </body>
+</html>
