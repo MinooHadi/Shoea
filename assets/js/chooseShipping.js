@@ -9,6 +9,7 @@ function chooseShipping() {
         shippingIcon: data.querySelector("i").className,
         shippingName: data.querySelector(".addressText h4").innerText,
         shippingPrice: data.querySelector(".price span").innerText,
+        id: selectedShipping.getAttribute("data-id")
     }
 
     shipping = JSON.stringify(shipping)
@@ -17,3 +18,13 @@ function chooseShipping() {
     window.location.href = "checkout.html"
 
 }
+
+window.addEventListener("DOMContentLoaded", () => {
+    let selected = localStorage.getItem("shipping");
+    selected = JSON.parse(selected);
+    if(selected) {
+        const input = document.querySelector(`input[data-id="${selected.id}"]`);
+        input.checked = true;
+    }
+
+})
