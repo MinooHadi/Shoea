@@ -127,11 +127,6 @@ const toggleFavorite = async (e) => {
 };
 
 
-function addToCart() {
-  console.log(product);
-}
-
-
 function selectSize(e) {
   const size = document.querySelectorAll("#numbers div");
   size.forEach(item => item.classList.remove("selectedSize"));
@@ -147,4 +142,14 @@ function selectColor(e) {
 }
 
 
-
+function addToCart() {
+  let selectedProduct = localStorage.getItem("myCart");
+  selectedProduct = JSON.parse(selectedProduct);
+  if(selectedProduct) {
+    selectedProduct.push(product);
+  } else {
+    selectedProduct = [product];
+  }
+  selectedProduct = JSON.stringify(selectedProduct);
+  localStorage.setItem("myCart", selectedProduct);
+}
