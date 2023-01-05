@@ -14,12 +14,3 @@ show2.addEventListener("click", () => {
   }
 });
 
-window.addEventListener("DOMContentLoaded", () => {
-  let localStorage = localStorage.getItem("email");
-  localStorage = JSON.parse(localStorage);
-  if(localStorage) {
-    window.location.href = "home.html"
-  } else {
-    window.location.href = "onboarding.html"
-  }
-})
